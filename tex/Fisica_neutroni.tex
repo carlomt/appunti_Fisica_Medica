@@ -1,0 +1,92 @@
+\chapter{Fisica dei Neutroni}
+
+Il Neutrone è un barione di carica neutra, con spin $\frac{1}{2}$, composto dai quark $udd$, con vita media $\tau_{1/2}=889\pm 2 \ s$ e massa $m_n=1,67\cdot 10{-27} \ kg$. 
+La vita media del neutrone denota che esso non è stabile quando non è legato ad altri barioni, e decade $\beta - $ creando un protone, un elettrone e un antineutrino.
+
+Un neutrone può essere termale, se ha energia cinetica dell'ordine dei meV ed è stato prodotto per fissione, oppure può essere caldo, se ha energie più alte e deve essere stato prodotto da acceleratori o altri metodi che vedremo.
+
+\section{Fissione Nucleare}
+
+La fissione spontanea avviene quando in un nucleo pesante ci sono decadimenti $\beta$ o cattura elettronica. Si osserva che il decadimento di neutroni è molto più frequente di quello di protoni. Ciò è dato dal fatto che i neutroni non interagiscono elettromagneticamente ma solo forte, dunque il potenziale non presenta muri da scavalcare, e il neutrone può fondamentalmente evaporare dal nucleo. 
+Notare che  il range della forza elettromagnetica è infinito, perché la massa della particella mediatrice è nulla, mentre il range della forza forte è finito e dell'ordine del femtometro, perché i mediatori dell'interazione tra nucleoni sono i pioni. La distribuzione delle energie con cui avviene la fissione spontanea è la seguente:
+
+\begin{equation}
+\frac{dN}{dE}=\sqrt{E}e^{-E/T}
+\end{equation}
+
+Un elemento spesso usato che sfrutta questo fenomeno è il $^{252}\text{Cf}$. $1 \ \mu g$ di Californio produce $2,3$ milioni di neutroni al secondo.
+
+La Fissione indotta invece viene provocata dall'invio sul nucleo di particelle esterne (ad esempio neutroni termici). La reazione è esotermica, dunque non ho un energia di soglia del proiettile per farla avvenire. Attraverso una stima dell'energia prodotta dalla reazione posso stimare anche la vita media di tale reazione. Allora si osserva che le fissioni sono immediate, mentre per esempio i neutroni prodotti da interazioni deboli vengono prodotti sensibilmente in ritardo, prendendo infatti il nome di neutroni ritardati.
+
+Nelle sorgenti a larga scala c'è un nocciolo di $^{235}\text{U}$ su cui un isotopo a fissione spontanea fa incidere neutroni termici. Il nocciolo fa fissione indotta ed emette neutroni molto energetici che vengono termalizzati in un moderatore (di solito acqua). Per portare un neutrone da energie del MeV a meV servono circa 30 collisioni. Poiché i neutroni non sono guidabili elettromagneticamente, per direzionarli semplicemente si scherma tutto tranne alcuni fori in cui vengono svolti gli esperimenti. Ogni foro è una beam line, alla cui fine c'è una block house in cui si svolge l'esperimento. In genere la fissione è un processo continuo, ma può essere reso pulsato mettendo uno schermo a intermittenza davanti al nocciolo.
+
+Per una misura del numero di collisioni necessarie a portare il neutrone da energia $E_0$ a $E_f$ si stima la letargia:
+
+\begin{equation}
+\eta=\frac{1}{\xi}\ln\left[\frac{E_0}{E_f}\right]
+\end{equation}
+
+Dove $\eta$ è il numero di collisioni necessarie, mentre $\xi$ è definito come segue:
+
+\begin{equation}
+\xi=1+\frac{(A-1)^2}{2A}\ln\left(\frac{A-1}{A+1}\right)
+\end{equation}
+
+\section{Fusione Nucleare}
+
+La fusione nucleare è una reazione ad altissimo Q. Un esempio è il seguente:
+
+\begin{equation}
+_1^2H+_1^3H \longrightarrow _2^4He+n+Energy \qquad \qquad \qquad Q=17\ MeV
+\end{equation}
+
+Il Q value viene spartito tra il neutrone, che prende 14 MeV e la particella alfa che se ne prende 3. 
+
+Oggi si cerca di replicare la fusione sulla terra attraverso macchine come il TOKAMAK. Attraverso specifiche configurazioni di campo elettromagnetico si collima un plasma di ioni deuterio. Per ottenere la condizione di plasma servono temperature di $13,6 \ eV$, ovvero migliaia di gradi Kelvin. 
+
+Ultimo metodo è la \emph{fusione inerziale}. Essa consiste nell'utilizzo di un guscio triziato contenente deuterio che viene bombardato con laser potentissimi. Il guscio dovrebbe quindi implodere sul deuterio causando fusione.
+
+
+Altra sorgente di neutroni si ottiene bombardando un target con particelle cariche, ad esempio particelle $\alpha$. 
+
+\section{Fotoproduzione e Spallazione}
+
+Anche i nuclei hanno stati rotovibrazionali. Allora eccitando gli stati vibrazionali sempre di più con dei fotoni, posso arrivare a far uscire i neutroni dal range delle interazioni forti e separarli dal resto del nucleo. Così esso viene emesso con energia che dipende dall'energia di legame di quel nucleo.
+
+I fotoni incidenti vengono prodotti dentro dei LINAC con ondulatori per sfruttare la radiazione di Brehmsstrahlung. Il processo completo si chiama Accelerator Driven Neutron Production.
+
+
+La Spallazione è il processo che consiste nella produzione di neutroni tramite la collisione di protoni energetici contro un bersaglio di Tantanio.  Permette un guadagno neutronico elevato: 16 neutroni ogni protone incidente. Il protone sbatte contro un nucleo sparando alcuni nucleoni a sbattere contro altri nuclei, e così via, in un processo a cascata. Si fa anche con muoni come proiettili, esempio ISIS.
+
+\section{Rilevazione di Neutroni}
+
+Per rilevare una particella essa deve produrre un segnale elettrico. Nel caso in cui io voglia fare un conteggio delle particelle basta contare gli impulsi. Se voglio fare spettroscopia invece ogni impulso deve avere intensità proporzionale a tale energia.
+
+Il neutrone è una particella neutra e dunque necessita di un meccanismo mediatore per essere rivelata. In generale si usano dei convertitori, ovvero dei materiali che presentano nuclei con cui i neutroni possono fare reazioni forti ed emettere particelle cariche in una camera a drift che raccoglie poi le particelle cariche sulle armature e produce una corrente. 
+
+Il problema che non permette di fare spettroscopia neutronica per basse energie è che ad esempio nella reazione con l'elio-3 succede questo:
+
+\begin{equation}
+n+^3He \longrightarrow ^3H+^1H+0,764 \ MeV
+\end{equation}
+
+Ovvero con qualunque energia io mandi il neutrone ottengo in risultato sempre quei 0,764 MeV. Posso distinguere gli effetti sugli altri prodotti solo per altissime energie del neutrone.
+
+I neutroni possono essere usati per fare spettroscopia molecolare: mandandoli con energie comparabili alle rotovibrazioni, essi interagiscono con la molecola per contatto, non elettromagneticamente. In tal modo gli stati elettronici della molecola non vengono alterati. 
+
+\section{Utilizzo dei Neutroni}
+
+Un utilizzo è l'analisi della conformazione di un cristallo attraverso diffrazione di Bragg. Nel processo si usano neutroni piuttosto che altre particelle cariche perché perderebbreo energia subito e non potrebbero penetrare a fondo. 
+Seguono ulteriori applicazioni nello specifico:
+
+\begin{itemize}
+\item Small Angle Neutron Scattering (SANS), è uno studio delle figure di scattering di neutroni contro un determinato bersaglio che da informazioni sulla forma e le dimensioni di ciò che compone tale bersaglio.
+\item Neutron Activation Analysis (NAA), Neutroni termici vengono assorbiti dal target che poi decade. Il processo può prendere ore. Se ne studiano i prodotti.
+\item Neutron Stimulated Emission Computed Tomography (NSECT), Fa utilizzo di neutroni più energetici per far si che i decadimenti siano istantanei, per fare imaging direttamente.
+\item Chip Irradiation. è il fenomeno per cui i neutroni energetici nei raggi cosmici possono intaccare dei chip causando perdita di dati o altri problemi. Il bombardamento dei chip con dei neutroni energetici artificiali serve a verificare la loro corretta schermatura 
+prima che siano utilizzati per aerei o satelliti.
+\end{itemize}
+
+Bibliografia e approfondimenti sulle interazioni tra neutroni e materia: \cite{Corvisiero} \cite{Assay}\\
+
+Bibliografia e approfondimenti sui rilevatori di neutroni: \cite{Beringer2} \cite{Knoll}

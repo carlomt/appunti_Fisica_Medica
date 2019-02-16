@@ -5,8 +5,16 @@ project(dispense_Fisica_Medica NONE)
 include(UseLATEX.cmake)
 
 add_latex_document(
+
   ${PROJECT_NAME}.tex
   INPUTS
   main.tex
+  Introduzione.tex
+  Unita_naturali.tex
+  Interazioni_radiazione_materia.tex
+  Decadimenti_nucleari.tex
+  Reazioni_nucleari.tex
+  Dosimetria.tex
+  Fisica_neutroni.tex
   IMAGE_DIRS figs
   )

@@ -1,0 +1,101 @@
+\chapter{Unità Naturali}
+
+Portare avanti nelle epressioni matematiche tutte le costanti fondamentali può essere pesante. Pertanto si sceglie di non considerarle quando considerazioni dimensionali permettono di ricostruire quali costanti vanno inserite a posteriori. E' questo il caso della meccanica quantistica e relativistica, dove risulta conveniente porre:
+
+\begin{equation}
+c=\hbar=1
+\end{equation}
+
+Visto che poi e' possibile ricostruire quali sono le potenze mancanti di queste costanti all'interno delle formule.\\
+
+Nella tabella 2.1 sono riassunti i valori di tali costanti nelle più comuni unità di misura. Conoscendo tali valori è possibile effettuare i calcoli a posteriori.\\
+Le unità di misura ottenute in questo modo, unitamente alla definizione della costante di struttura fine $\alpha_{em}=\frac{e^2}{4\pi\epsilon_0\hbar c}\sim\frac{1}{137}$ che, poste $c=\hbar=1$ diventa $\alpha_{em}=\frac{e^2}{4\pi\epsilon_0}$, costituiscono il sistema di unità naturali.
+
+\begin{table}
+\center
+\begin{tabular}{|l|l|l|}
+\hline
+                                                            & Dimensioni                                             & Misura                           \\ \hline
+\multicolumn{1}{|c|}{\multirow{3}{*}{$\hbar$}} & \multirow{3}{*}{energia$\cdot$ tempo}     & $1,035 \cdot 10^{-34} J\cdot s$  \\ \cline{3-3} 
+\multicolumn{1}{|c|}{}                                      &                                                        & $6,5 \cdot 10^{-16} eV\cdot s$   \\ \cline{3-3} 
+\multicolumn{1}{|c|}{}                                      &                                                        & $6,5 \cdot 10^{-13} MeV\cdot ns$ \\ \hline
+\multirow{4}{*}{c}                                          & \multirow{4}{*}{posizione/tempo}                       & $3,0\cdot10^8 m/s$               \\ \cline{3-3} 
+                                                            &                                                        & $300 km/s$                       \\ \cline{3-3} 
+                                                            &                                                        & $\mathbf{30 cm/ns}$              \\ \cline{3-3} 
+                                                            &                                                        & $3,0\cdot10^{14} fm/ns$          \\ \hline
+\multirow{2}{*}{$\hbar$ c}                     & \multirow{2}{*}{energia$\cdot $posizione} & $3,1\cdot 10^{-26} J\cdot m$     \\ \cline{3-3} 
+                                                            &                                                        & $\mathbf{200 MeV \cdot fm}$            \\ \hline
+\end{tabular}
+\caption{Valori delle costanti $\hbar$ e $c$ nelle più comuni unità di misura}
+\end{table}
+
+Il metodo più semplice per convertire le grandezze da unità naturali a sistema internazionale, è porre:
+
+\begin{equation}
+Q_{SI}=Q_{UN}\cdot(\hbar c)^m\cdot c^n
+\end{equation}
+
+Dove $Q_{UN}$ è una qualsiasi grandezza espressa nel sistema di unità naturali, $Q_{SI}$ è la stessa grandezza espressa nel sistema di unità internazionale e $m$ ed $n$ sono le specifiche potenze che bisogna porre ai termini $\hbar c$ e $c$ affinché le dimensioni della grandezza considerata siano coerenti in entrambi i sistemi di unità di misura.\\
+Si consiglia di utilizzare i valori delle costanti espresse in grassetto nella tabella 2.1.\\
+
+\section{Cinematica e Dinamica Relativistica}
+
+Il sistema di unità naturali è specialmente utile perché semplifica le equazioni della relatività ristretta. Nella tabella 2.2 è presente una comparazione di tale equazioni nel sistema di unità internazionale e in quello di unità naturali
+
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|}\hline
+SI & UN \\ \hline
+$\beta=\frac{v}{c}$   & $\beta=v$   \\ \hline
+$E=\sqrt{p^2c^2+m^2c^4}$   &   $E=\sqrt{p^2+m^2}$ \\ \hline
+$p=m\beta\gamma c$   &  $p=m\beta\gamma$  \\ \hline
+$T=E-mc^2$   &  $T=E-m$  \\ \hline 
+   &  $\beta=\frac{p}{E}$  \\ \hline
+   &  \\ \hline
+\end{tabular}
+\label{equazioni}
+\caption{Confronto delle equazioni di cinematica relativistica nei due sistemi di unità di misura}
+\end{table}
+
+\subsection{Esempi ed Applicazioni}
+
+\emph{Un elettrone ha quantità di moto $p_{UN}=1 MeV/c$. Quale è la sua quantità di moto espressa nel sistema internazionale?}\\
+
+Ricordando la conversione $1 eV=1,6\cdot10^{-19} J$ e il valore della velocità della luce $c=3\cdot 10^8 m/s$, otteniamo:
+
+\begin{equation}
+p_{SI}=p_{UN}\cdot\frac{1,6\cdot10^{-19}\cdot10^6}{3\cdot10^8}=5\cdot10^{-22}kg\cdot m/s
+\end{equation}
+
+\emph{Qual è l'energia elettrostatica di un elettrone a distanza $d=0,5\AA$ da un nucleo di carbonio, trascurando lo schermaggio prodotto dagli altri elettroni?}\\
+
+Ricordando l'espressione per l'energia potenziale elettrostatica per un sistema di due cariche puntiformi abbiamo
+
+\begin{equation}
+U=\frac{Ze^2}{4\pi\epsilon_0d}=\frac{Z\alpha_{UN}}{d}
+\end{equation}
+
+Dove $\alpha_{UN}=\frac{e^2}{4\pi\epsilon_0}\sim\frac{1}{137}$ è detta costante di struttura fine ed è adimensionale: non dipende dunque dal sistema di unità di misura scelto. Facendo un'analisi dimensionale ora decidiamo quali potenze di $\hbar c$ e $c$ vanno aggiunte.\\
+
+A sinistra abbiamo un'energia, a destra l'inverso di una lunghezza.
+
+\begin{equation}
+E=\frac{([\hbar c])^m \cdot [c]^n}{L}=(E\cdot L)^m\left(\frac{L}{T}\right)^n\cdot L^{-1}
+\end{equation}
+
+Da cui si ricava che necessariamente $m=1$ e $n=0$. Ovvero:
+
+\begin{equation}
+U=\frac{Z\alpha\hbar c}{d}=\frac{6\cdot\frac{1}{137}\cdot200MeV\cdot fm}{5\cdot 10^4 fm}=175eV
+\end{equation}
+
+Dove ci siamo ricordati che $1\AA=10^{-10}m$ e $1 fm=10^{-15}m$.\\
+
+Esercizi ulteriori:
+
+\begin{itemize}
+\item \emph{Qual è l'energia cinetica di un nucleo di Elio con impulso $p=50MeV/c$?}
+\item \emph{Qual è il raggio dell'orbita di un protone con energia cinetica $T=10MeV$ immerso in un campo magnetico di modulo $B=0,5 T$?}
+\item \emph{Quali sono la $\beta$ e $\beta\gamma$ di un elettrone accelerato da $1 MV$?}
+\end{itemize}
+

@@ -1,0 +1,104 @@
+\chapter{Reazioni Nucleari}
+
+Per le reazioni nucleari c'è una specifica nomenclatura. Esponiamola con un esempio. La seguente reazione:
+
+\begin{equation}
+\alpha+^{14}_7N \longrightarrow p+^{17}_8O
+\end{equation}
+
+Viene indicata con $^{14}N(\alpha,p)^{17}O$. In generale si indica:
+
+\begin{equation}
+\text{Nucleo}_i(\text{proiettile},\text{frammento})\text{Nucleo}_f
+\end{equation}
+
+Le reazioni nucleari possono essere categorizzate come segue:
+
+\begin{itemize}
+\item Fotodisintegrazione Nucleare: un fotone inizializza una reazione: $X(\gamma,*)Y$
+\item Cattura Neutronica o Protonica Radioattiva: un nucleo cattura un nucleone emettendo $\gamma$: $X(n/p,\gamma)Y$
+\item Scattering Elastico: canali d'entrata e uscita identici, nessuno stato eccitato: $X(a,a)X$
+\item Scattering Inelastico: nel canale d'uscita uno o più prodotti sono in stati eccitati: $X(a,a)X^* \rightarrow X(a,a+\gamma)X$
+\end{itemize}
+
+Per i decadimenti nucleari avevamo che il Q-value doveva sempre essere maggiore di 0. Nelle reazioni esso può assumere segno diverso, portando a tre tipi di reazioni:
+
+\begin{itemize}
+\item $Q>0$: reazioni esotermiche, ovvero spontanee, tipo fissione, fusione. Nessuna condizione sull'energia cinetica del proiettile.
+\item $Q=0$: reazioni elastiche.
+\item $Q<0$: reazioni endotermiche, ovvero per avvenire l'energia cinetica del proiettile deve essere sopra una certa soglia.
+\end{itemize}
+
+Nel sistema della particella b, l'energia cinetica di soglia risulta essere
+
+\begin{equation}
+T_a>\frac{(\sum m_c)^2-(m_a+m_b)^2}{2m_b}
+\end{equation}
+
+Dove bisogna stare attenti all'espressione delle masse dei nuclei: siccome il numero di protoni e neutroni si conserva nelle reazioni nucleari, è importante tenere conto delle binding energy nel conto complessivo. \\
+Nei prossimi paragrafi approfondiremo alcuni tipi di reazioni nucleari specialmente interessanti per le loro applicazioni 
+
+\section{Produzione di Radioisotopi}
+
+Alcune sostanze stabili possono essere rese radioattive sottoponendole a bombardamento di neutroni o protoni. Il modello matematico che descrive l'andamento dell'attività della sostanza così prodotta è molto simile a quello di nuclei padri e figlie visto nel capitolo sui decadimenti nucleari. 
+Immaginiamo di avere un flusso $\Phi_p$ di protoni incidenti su un nucleo inizialmente stabile con sezione d'urto per l'attivazione $\sigma_{att}$. Allora il rate con cui avviene l'attivazione sarà
+
+\begin{equation}
+P=\Phi_p \sigma_{att} n_Y
+\end{equation}
+
+Allora se $\tau_Y$ è la vita media dell'Y attivato, l'andamento del numero di nuclei Y sarà:
+
+\begin{equation}
+\frac{\mathrm{d}N_Y}{\mathrm{d}t}=-\frac{N_Y}{\tau_Y}+P
+\end{equation}
+
+Integrando si ottiene
+
+\begin{equation}
+N_Y(t)=P\tau_Y(1-e^{-t/\tau_Y})
+\end{equation}
+
+Da cui si vede che nel tempo l'attività raggiunge un asintoto dato da $A=P$, che in tale asintoto $\frac{\mathrm{d}N_Y}{\mathrm{d}t}=0$ e che sempre in tale asintoto $P=\frac{N_Y}{\tau_Y}$.
+
+Osservando l'andamento vicino all'origine, per tempi molto brevi, sviluppando al primo ordine l'andamento dell'attività, ottengo:
+
+\begin{equation}
+A(\Delta t)=\frac{P \Delta t}{\tau_Y}
+\end{equation}
+
+Ovvero aumenta in maniera lineare. Rimuovendo un quantitativo di radioisotopo posso osservare il suo andamento e ricavare la rate di produzione iniziale P.
+
+\section{Frammentazione}
+
+Se il proiettile nella reazione nucleare è massivo, può frammentarsi. La reazione generica ha la forma seguente:
+
+\begin{equation}
+x+X \longrightarrow a+b+X
+\end{equation}
+
+In una reazione del genere avremo i seguenti vincoli:
+
+\begin{itemize}
+\item $m_a, m_b  \ < \ m_x$ perché risultati di una frammentazione. L'uguaglianza non vale perché si è persa della massa che era binding energy nucleare.
+\item $Z_a, Z_b \ < \ Z_x$ perché la somma dei protoni dei due prodotti di frammentazione deve essere il numero di protoni del proiettile.
+\item $\beta_a, \beta_b \ >> \ \beta_x$ perché sono meno massivi e c'è il rilascio di energia della binding energy.
+\end{itemize}
+
+Essendo i prodotti di reazione più veloci e meno carichi, la loro perdita di energia nell'unità di percorso è minore e dunque il loro range è molto maggiore di quello del proiettile originale. 
+In altre parole i prodotti di frammentazione penetrano di più del proiettile.
+Nella radioterapia a energie maggiori e proiettili più pesanti corrispondeva un LET più piccato intorno al range, ma da questo fenomeno risulta che se tali energie fossero troppo alte, e tali proiettili troppo pesanti, potrebbero risultare in prodotti di frammentazione energetici e più penetranti che danneggerebbero il paziente. Questo è il motivo per cui nell'adronterapia non si usano nuclei più pesanti del carbonio.
+
+\section{Attivazione Neutronica}
+\`E un fenomeno che si sfrutta nella \emph{Neutron Activation Analysis} nello studio della composizione di un certo materiale. Consiste nell'acquisizione di un neutrone libero da parte di un nucleo in deficienza di neutroni. A questa acquisizione segue l'emissione di un fotone $\gamma$ con una specifica energia:
+
+\begin{equation}
+E_{\gamma}=E_{Y^*}-E_{Y}
+\end{equation}
+
+\chapter{Dosimetria}
+La dosimetria e' una branca a cavallo tra la fisica e la medicina che definisce le grandezze fisiche che hanno la maggior probabilità di essere correlate a grandezze cliniche (quale la sopravvivenza dei pazienti). Questa quantificazione e' necessaria sia per esposizioni accidentali alla radiazioni, quali nel caso di incidenti nucleari, che per esposizioni intenzionali a radiazioni per fini terapeutici. Partiamo considerando alcuni ordini di grandezza:
+Vi sono circa $10^{13}$ cellule nel corpo umano, ognuna con un diametro medio di $10 \ \mu m$, con un nucleo di $3 \ \mu m$ contenente DNA, che ha una larghezza tipica di $ 2 \ nm$ e la lunghezza di un gene è circa $0,1 \ \mu m$.  \\
+
+Esistono due modi in cui una radiazione incidente può provocare la morte di una cellula, uno diretto ed uno indiretto. Per uccidere direttamente una cellula la radiazione incidente deve rompere legami in entrambe le eliche di un tratto del suo DNA in modo da renderlo difficilmente reparabile, perché nessuna delle due eliche potrà fare da stampo per la rigenerazione dell'elica complementare. \\
+Ciò che accade più frequentemente però è che la cellula venga uccisa dalla radiazione incidente in modo indiretto. Questo avviene quando la radiazione ionizza le molecole d'acqua presenti nella cellula creando specie reattive come $\text{OH}^{-}$, $\text{O}_2^{-}$ e $\text{H}_2\text{O}_2$ che possono attaccare direttamente il DNA o portare alla sintetizzazione di altre sostanze analoghe a quelle adoperate nella chemioterapia che uccidono la cellula o ne inibiscono la riproduzione.\\
