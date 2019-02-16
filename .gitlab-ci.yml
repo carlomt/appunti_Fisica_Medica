@@ -11,6 +11,6 @@ pdf:
   - mkdir build && cd build && ${CI_PROJECT_DIR}/cmake-install/bin/cmake ${CI_PROJECT_DIR}/tex && ${CI_PROJECT_DIR}/cmake-install/bin/cmake --build .
   artifacts:
     paths:
-    - build/cpp-geant4-2018.pdf
+    - build/dispense_Fisica_Medica.pdf
   only:
   - master
