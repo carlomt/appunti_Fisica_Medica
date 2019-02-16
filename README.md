@@ -5,9 +5,9 @@ di Manuel Loparco
 
 repository di [Carlo Mancini](http://www.roma1.infn.it/~mancinit/)
 
-La [versione piu' aggiornata del PDF
+La [versione più aggiornata del PDF
 file](https://baltig.infn.it/mancinit/dispense_fisica_medica/-/jobs/artifacts/master/raw/build/dispense_Fisica_Medica.pdf?job=pdf)
-e' disponibile come artifact del Continuous Integration. 
+è disponibile come artifact del Continuous Integration. 
 
 ## Suggerimenti per la compilazione:
 creare una directory `build` dentro `tex`:
