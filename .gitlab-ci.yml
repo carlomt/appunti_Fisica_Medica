@@ -1,0 +1,16 @@
+pdf:
+  stage: deploy
+  image: aergus/latex
+  script:
+  - env
+  - pwd
+  - ls -l
+  - ls -l ${CI_PROJECT_DIR}
+  - wget -q https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.sh
+  - mkdir -p ${CI_PROJECT_DIR}/cmake-install && sh cmake-3.12.3-Linux-x86_64.sh --skip-license --prefix=${CI_PROJECT_DIR}/cmake-install
+  - mkdir build && cd build && ${CI_PROJECT_DIR}/cmake-install/bin/cmake ${CI_PROJECT_DIR}/tex && ${CI_PROJECT_DIR}/cmake-install/bin/cmake --build .
+  artifacts:
+    paths:
+    - build/cpp-geant4-2018.pdf
+  only:
+  - master
