@@ -12,16 +12,16 @@ e' disponibile come artifact del Continuous Integration.
 ## Suggerimenti per la compilazione:
 creare una directory `build` dentro `tex`:
 ```bash
-`cd tex`
-`mkdir build`
+cd tex
+mkdir build
 ```
 
 usare [CMake](https://cmake.org/) per preparare la compilazione:
 ```bash
-`cmake ..`
+cmake ..
 ```
 
 compilare:
 ```bash
-`make`
+make
 ```
