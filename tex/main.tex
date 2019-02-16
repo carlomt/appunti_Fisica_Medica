@@ -10,6 +10,16 @@
 \usepackage{multirow}
 \usepackage{siunitx}
 \usepackage{hyperref}
+\hypersetup{colorlinks=true,
+	%% linkcolor=cernblue,
+	%% anchorcolor=cernblue,
+	%% citecolor=cernblue,
+	%% urlcolor=cernblue,
+	%% plainpages=false,
+	%% pagebackref=true,
+  pdftitle={Appunti di Istituzioni di Fisica Applicata},
+}
+
 \usepackage{microtype}
 \usepackage{listings}
 \usepackage{adjustbox}
@@ -18,7 +28,31 @@
 \usepackage{mathrsfs}
 \usepackage{titling}
 \usepackage{etoolbox}
-\usepackage[a4paper,top= 3cm,bottom= 2cm,left= 2cm,right= 2cm]{geometry}
+
+\usepackage[
+            hyperref=true,
+            clearlang=true,
+            url=true,
+            isbn=true,
+            arxiv=abs,
+            hyperref=true,
+            backref=true,
+            sorting=nyt,
+%            style=alphabetic,
+            style=ieee-alphabetic,
+%            style=authoryear,
+%            style=apa,
+            citereset=chapter,
+            maxcitenames=3,
+            maxbibnames=100,
+            block=space,
+%            backend=bibtexu
+            backend=bibtex
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+%% \usepackage[a4paper,top= 3cm,bottom= 2cm,left= 2cm,right= 2cm]{geometry}
+\usepackage[a4paper]{geometry}
 \newcommand{\subtitle}[1]{%
   \posttitle{%
     \par\end{center}
@@ -26,14 +60,23 @@
     \vskip0.5em}%
 }
 
+\usepackage[acronym,nomain]{glossaries}
+%\gls per gli acronimi
+\def\acro#1{\gls{#1}} %ridefinito in \acro
+
+\include{Acronyms}
+
 \title{Appunti di Istituzioni di Fisica Applicata}
 \subtitle{Dalle lezioni del prof. Riccardo Faccini}
 \author{Manuel Loparco}
 
 \begin{document}
 \maketitle
+\addcontentsline{toc}{chapter}{Appunti di Istituzioni di Fisica Applicata}
 
 \tableofcontents
+\addcontentsline{toc}{chapter}{Indice}
+
 \mainmatter
 
 \include{Introduzione}
@@ -50,185 +93,17 @@
 
 \include{Fisica_neutroni}
 
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliografia} 
 
-\begin{thebibliography}{35}
+%% \printglossaries
+%% \addcontentsline{toc}{chapter}{Lista degli acronimi}
 
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
 
-\bibitem{ENMP}
-R.Powsner, E.Powsner 
-\textit{Essential Nuclear Medicine Physics}
- (2nd edition), Wiley (2006)
-
-\bibitem{NMP}
-D.L. Bailey et al
-\textit{Nuclear Medicine Physics}.
-IAEA\\
- \textit{https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1617web-91160047.pdf}
-
-\bibitem{CLA}
-\textit{Cyclotrons, LINACs and their applications}
-CAS 1994\\ \textit{https://www.dropbox.com/s/zpr104qgfhon852/CERN-96-02.pdf?dl=0}
-
-\bibitem{PET1}
-H. Jadvar, J.A. Partker
-\textit{Clinical PET and PET-CT}
-Sprigler 2006
-
-\bibitem{PET2}
-D.Bailey, D.W.Townsend, P.E.Valk, M.N.Maisey
-\textit{Positron Emission Tomography}
-Springer (2005)
-
-\bibitem{CT}
-F. Natterer
-\textit{The mathematics of Computerized Tomography}
-SIAM 2001
-
-\bibitem{Rossi}
-Adrontherapy course by Sandro Rossi to INFN Rome (2013)
-\\ \textit{https://agenda.infn.it/event/6405/attachments/45601/}
-
-\bibitem{Braccini}
-Adrontherapy course by Saverio Braccini to INFN Rome (2012)
-\\ \textit{https://agenda.infn.it/event/2255/attachments/27899/}
-
-\bibitem{ADRO}
-Impact of nuclear reactions on Hadron Therapy (2008)
-\\ \textit{http://www.lpc-caen.in2p3.fr/root/.EJC2011-CUSSOL/EJC2011\_CUSSOL.pdf}
-
-\bibitem{Dosimetria per protonterapia}
-Knopf and Lomax,
-\textit{Dosimetry for protontherapy}
-\\ \textit{http://iopscience.iop.org/article/10.1088/0031-9155/58/15/R131/meta}
-
-\bibitem{Dosimetria per adronterapia}
-Faccini and Patera
-\textit{Dosimetry for hadrontherapy}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/138728/mod\_page/content/14/Review$\%$20Dosimetria$\%$20per$\%$20HT$\%$20$\%$28FP$\%$29.pdf}
-
-\bibitem{Boron}
-IAEA Report
-\textit{Boron Neutron Capture Therapy}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/138728/mod\_page/content/14/te\_1223\_prn.pdf}
-
-\bibitem{Acceleratori per adronterapia}
-\textit{Review of Accelerators for Hadron Therapy}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/138728/mod\_page/content/14/review\_accelerators\_HT.pdf}
-
-\bibitem{LINAC}
-\textit{LINAC for protontherapy}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/138728/mod\_page/content/14/TULIP\_LINAC\_PT.pdf}
-
-\bibitem{Radiosurgery}
-G. Mariani, A. E. Giuliano, H.W. Strauss,
-\textit{Radioguided surgery a comprehensive team approach}
-Springer 2006
-
-\bibitem{Intraoperative probes}
-E. Hoffman et al,
-\textit{Intraoperative probes and imaging probes}
-Eur. J. Nucl. Med. 26, 913–935 (1999)
-
-\bibitem{Brachioterapia}
-Y. Watanabe
-\textit{Brachytherapy Physics}
-\\ \textit{https://www.slideshare.net/hikikomorijcv18/brachytherapy-30581870}
-
-\bibitem{Cultural}
-EPS review
-\textit{Nuclear Physics for Cultural Heritage}
-\\ \textit{https://www.edp-open.org/images/stories/books/fulldl/Nuclear-physics-for-cultural-heritage.pdf}
-
-\bibitem{Longo}
-E. Longo e C. Dionisi
-\textit{Dispense del corso di Laboratorio di Fisica Nucleare e Subnucleare, Chap. 4}
-\\ \textit{http://www.roma1.infn.it/people/longo/fnsn/capitolo4.pdf}
-
-\bibitem{Beringer}
-J. Beringer et al. (Particle Data Group)
-\textit{Passage of particles through matter, Chap. 31}
-Phys. Rev. D86, 010001 (2012)
-\\ \textit{http://pdg.lbl.gov/2013/reviews/rpp2013-rev-passage-particles-matter.pdf}
-
-\bibitem{Amaldi}
-U. Amaldi
-\textit{Radiation Physics: Photons and Charged Hadrons}
-2001 \\ \textit{https://physique.cuso.ch/fileadmin/physique/document/Amaldi-Rad.-Trento-2001.pdf}
-
-\bibitem{Corvisiero}
-P. Corvisiero
-\textit{Interazioni Neutroni Materia, Chap. 14}
-\\ \textit{https://www.ge.infn.it/~corvi/doc/didattica/radioattivita/lezioni/}
-
-\bibitem{Assay}
-Passive Nondestructive Assay Manual
-\textit{Neutrons Interactions with Matter}
-\\ \textit{https://www.lanl.gov/orgs/n/n1/panda/}
-
-\bibitem{Beringer2}
-J. Beringer et al. (Particle Data Group)
-\textit{Particle Detectors at Accelerators}
-Phys. Rev. D86, 010001 (2012), Chap. 32
-\\ \textit{http://pdg.lbl.gov/2013/reviews/rpp2013-rev-particle-detectors-accel.pdf}
-
-\bibitem{Knoll}
-G.F. Knoll
-\textit{Radiation Detection and Measurement}
-
-\bibitem{Corvisiero2}
-P. Corvisiero
-\textit{Appunti di Radiativita', Chap. 18}
-\\ \textit{https://www.ge.infn.it/~corvi/doc/didattica/radioattivita/lezioni/}
-
-\bibitem{Beringer3}
-J. Beringer et al. (Particle Data Group)
-\textit{Radiactivity and radiation protection, Chap. 34}
-Phys. Rev. D86, 010001 (2012)
-\\ \textit{http://pdg.lbl.gov/2013/reviews/rpp2013-rev-radioactivity.pdf}
-
-\bibitem{Films}
-P. Fattibene, C. De Angelis,
-\textit{Film Dosimetria}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/137557/mod\_page/content/17/DosimetriFilm.pdf}
-
-\bibitem{TLD}
-\textit{Dosimetria a Termoluminescenza}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/137557/mod\_page/content/17/DosimetriTLD.pdf}
-
-\bibitem{Laitano}
-R.F. Laitano,
-\textit{Fondamenti di Dosimetria delle radiazioni ionizzanti}
-\\ \textit{http://www.enea.it/it/seguici/pubblicazioni/pdf-volumi/FondamentidosimetriaradiazioniionizzantiIV.pdf}
-
-\bibitem{Corvisiero3}
-P. Corvisiero,
-\textit{Le leggi del decadimento radiativo, Chap. 1,2}
-\\ \textit{https://www.ge.infn.it/~corvi/doc/didattica/radioattivita/lezioni/}
-
-\bibitem{Nutshell}
-A. Bertulani,
-\textit{Nuclear Physics in a Nutshell, Chap. 6}
-
-\bibitem{Ferrario}
-M. Ferrario,
-\textit{Accelerator Physics: Basic Principles on Beam Focusing and Transport}
-\\ \textit{https://elearning.uniroma1.it/pluginfile.php/137557/mod\_page/content/17/8\_SPARC-BD-12-01.pdf}
-
-\bibitem{Wilson}
-E. Wilson,
-\textit{An Introduction to Particle Acceleration}
-2001
-
-\bibitem{Rosemblatt}
-J. Rosemblatt,
-\textit{Particle Acceleration}
-1968
-
-
-
-
-\end{thebibliography}
-
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename} 
 
 \end{document}
 

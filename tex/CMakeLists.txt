@@ -9,6 +9,7 @@ add_latex_document(
   ${PROJECT_NAME}.tex
   INPUTS
   main.tex
+  Acronyms.tex
   Introduzione.tex
   Unita_naturali.tex
   Interazioni_radiazione_materia.tex
@@ -16,5 +17,7 @@ add_latex_document(
   Reazioni_nucleari.tex
   Dosimetria.tex
   Fisica_neutroni.tex
+  BIBFILES
+  bibliografia.bib
   IMAGE_DIRS figs
   )
