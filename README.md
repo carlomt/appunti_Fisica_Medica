@@ -1,9 +1,9 @@
 # dispense_Fisica_Medica
 
-Appunti di Istituzioni di Fisica Applicata dal corso del prof. Riccardo Faccini
+Appunti di Istituzioni di Fisica Applicata dal corso del [Prof. Riccardo Faccini](http://babar.roma1.infn.it/~faccini/)
 di Manuel Loparco
 
-repository di Carlo Mancini
+repository di [Carlo Mancini](http://www.roma1.infn.it/~mancinit/)
 
 La [versione piu' aggiornata del PDF
 file](https://baltig.infn.it/mancinit/dispense_fisica_medica/-/jobs/artifacts/master/raw/build/dispense_Fisica_Medica.pdf?job=pdf)
