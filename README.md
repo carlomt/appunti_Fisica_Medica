@@ -32,7 +32,21 @@ make
 
 ## Per contribuire:
 Esiste un [clone di questo repository su GitHub](https://github.com/carlomt/appunti_Fisica_Medica)
+
 Creare un account su [GitHub](https://github.com/)
+
 andare sulla pagina https://github.com/carlomt/appunti_Fisica_Medica
+
 e premere sul tasto "Fork" in alto a destra.
-Apportare le modifiche e poi fare un "Merge request"
+
+Scaricare la propria versione, appena clonata, di questi appunti
+```
+git clone git@github.com:USERNAME_DI_GITHUB/appunti_Fisica_Medica.git
+```
+Apportare le modifiche e poi caricarle sul proprio fork:
+```
+git commit -a -m 'descrizione modifiche'
+git push
+```
+
+fare un "Merge request" dal sito di GitHub
