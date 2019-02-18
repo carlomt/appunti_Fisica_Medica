@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.4)
 
-project(dispense_Fisica_Medica NONE)
+project(appunti_Fisica_Medica NONE)
 
 include(UseLATEX.cmake)
 
