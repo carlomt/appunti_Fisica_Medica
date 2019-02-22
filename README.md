@@ -14,6 +14,15 @@ git clone https://gitlab.com/carlomt/appunti_Fisica_Medica.git
 ```
 
 ## Suggerimenti per la compilazione:
+
+### Con il Makefile
+semplicemente digitare:
+```bash
+make
+```
+nella cartella `tex`
+
+### Con CMake
 creare una directory `build` dentro `tex`:
 ```bash
 cd tex
