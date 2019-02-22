@@ -1,7 +1,7 @@
 # appunti_Fisica_Medica
 
 Appunti di Istituzioni di Fisica Applicata dal corso del [Prof. Riccardo Faccini](http://babar.roma1.infn.it/~faccini/)
-di Manuel Loparco
+a partire dalle note di Manuel Loparco
 
 La [versione più aggiornata del PDF
 file](https://gitlab.com/carlomt/appunti_Fisica_Medica/-/jobs/artifacts/master/raw/build/appunti_Fisica_Medica.pdf?job=pdf)
