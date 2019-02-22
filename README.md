@@ -4,13 +4,13 @@ Appunti di Istituzioni di Fisica Applicata dal corso del [Prof. Riccardo Faccini
 di Manuel Loparco
 
 La [versione più aggiornata del PDF
-file](https://baltig.infn.it/mancinit/appunti_fisica_medica/-/jobs/artifacts/master/raw/build/appunti_Fisica_Medica.pdf?job=pdf)
+file](https://gitlab.com/carlomt/appunti_Fisica_Medica/-/jobs/artifacts/master/raw/build/appunti_Fisica_Medica.pdf?job=pdf)
 è disponibile come artifact del Continuous Integration. 
 
 ## Per scaricare il sorgente:
 da un terminale:
 ```
-git clone https://baltig.infn.it/mancinit/appunti_fisica_medica.git
+git clone https://gitlab.com/carlomt/appunti_Fisica_Medica.git
 ```
 
 ## Suggerimenti per la compilazione:
@@ -31,17 +31,20 @@ make
 ```
 
 ## Per contribuire:
-Esiste un [clone di questo repository su GitHub](https://github.com/carlomt/appunti_Fisica_Medica)
+[Creare un account su GitLab](https://gitlab.com/users/sign_in#register-pane)
+e fare il login
 
-Creare un account su [GitHub](https://github.com/)
+[Generare una coppia di chiavi ssh](https://docs.gitlab.com/ee/ssh/#generating-a-new-ssh-key-pair)
 
-andare sulla pagina https://github.com/carlomt/appunti_Fisica_Medica
+[Aggiungere la chiave pubblica al proprio account GitLab](https://docs.gitlab.com/ee/ssh/#adding-an-ssh-key-to-your-gitlab-account)
 
-e premere sul tasto "Fork" in alto a destra.
+Andare sulla pagina https://gitlab.com/carlomt/appunti_Fisica_Medica
+
+Premere sul tasto "Fork" in alto a destra.
 
 Scaricare la propria versione, appena clonata, di questi appunti
 ```
-git clone git@github.com:USERNAME_DI_GITHUB/appunti_Fisica_Medica.git
+git clone git@gitlab.com:USERNAME_DI_GITLAB/appunti_Fisica_Medica.git
 ```
 Apportare le modifiche e poi caricarle sul proprio fork:
 ```
