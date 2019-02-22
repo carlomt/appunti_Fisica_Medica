@@ -53,3 +53,5 @@ git push
 ```
 
 fare un "Merge request" dal sito di GitHub
+
+[Suggerimenti base su git](https://guides.github.com/activities/hello-world/)
