@@ -61,6 +61,6 @@ git commit -a -m 'descrizione modifiche'
 git push
 ```
 
-fare un "Merge request" dal sito di GitHub
+fare un "Merge request" dal sito di GitLab
 
 [Suggerimenti base su git](https://guides.github.com/activities/hello-world/)
