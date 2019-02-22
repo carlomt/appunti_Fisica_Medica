@@ -1,4 +1,4 @@
-# dispense_Fisica_Medica
+# appunti_Fisica_Medica
 
 Appunti di Istituzioni di Fisica Applicata dal corso del [Prof. Riccardo Faccini](http://babar.roma1.infn.it/~faccini/)
 di Manuel Loparco
