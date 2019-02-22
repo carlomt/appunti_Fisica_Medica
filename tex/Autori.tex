@@ -1,9 +1,23 @@
 % !TEX root = main.tex
+\newread\myread% Get a file handle grip called \myread
+
+\newcommand{\loaditemsfromfile}[2][enumerate]{%
+\IfFileExists{#2}{%
+  \openin\myread=#2
+  \begin{#1}  % Use an itemize enviroment with #1 as name of the env. 
+    \loop\unless\ifeof\myread%
+    \read\myread to \localvariable
+    \ifeof\myread
+    \else
+  \item \localvariable
+    \fi
+    \repeat
+  \end{#1} % close the environment
+  \closein\myread%  \close the file
+}{}%
+}
 
 \chapter*{Collaboratori}
 
-\begin{itemize}
+\loaditemsfromfile[itemize]{../CONTRIBUTING.md}
 
-\item Manuel Loparco
-
-\end{itemize}
