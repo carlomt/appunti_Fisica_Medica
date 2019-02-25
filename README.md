@@ -65,3 +65,16 @@ git push
 fare un "Merge request" dal sito di GitLab
 
 [Suggerimenti base su git](https://guides.github.com/activities/hello-world/)
+
+### Per scaricare eventuali aggiornamenti
+```bash
+git fetch --tags
+git pull
+```
+
+### Per creare un nuovo tag
+```bash
+git commit -m "vN.M"
+git tag -m "commento" "vN.M"
+git push --tags
+```
