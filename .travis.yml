@@ -1,6 +1,6 @@
 sudo: required
 install:
-  - sudo apt-get install -qq luatex texlive-base texlive-luatex pandoc latexmk texlive texlive-xetex tex4ht texlive-latex-extra texlive-fonts-extra
+  - sudo apt-get install -qq luatex texlive-base texlive-luatex pandoc latexmk texlive texlive-xetex tex4ht texlive-latex-extra texlive-fonts-extra texlive-lang-italian
   # make4ht
   - git clone https://github.com/michal-h21/make4ht
   - cd make4ht
@@ -9,11 +9,9 @@ install:
   - cd ..
 script:
   - git fetch --tags
-  - make
-  - sudo make install
   - cd tex
   - make
-  - tex4ebook
+  - tex4ebook appunti_Fisica_Medica.tex
 deploy:
   provider: releases
   api_key:
