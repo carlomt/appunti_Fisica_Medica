@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/carlomt/appunti_Fisica_Medica.svg?branch=master)
+![Build Status](https://travis-ci.org/carlomt/appunti_Fisica_Medica.svg?branch=master)
 # appunti_Fisica_Medica
 
 Appunti di Istituzioni di Fisica Applicata dal corso del [Prof. Riccardo Faccini](http://babar.roma1.infn.it/~faccini/)
