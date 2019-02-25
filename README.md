@@ -52,11 +52,11 @@ Andare sulla pagina https://gitlab.com/carlomt/appunti_Fisica_Medica
 Premere sul tasto "Fork" in alto a destra.
 
 Scaricare la propria versione, appena clonata, di questi appunti
-```
+```bash
 git clone git@gitlab.com:USERNAME_DI_GITLAB/appunti_Fisica_Medica.git
 ```
 Apportare le modifiche e poi caricarle sul proprio fork:
-```
+```bash
 git commit -a -m 'descrizione modifiche'
 git push
 ```
@@ -64,3 +64,16 @@ git push
 fare un "Merge request" dal sito di GitLab
 
 [Suggerimenti base su git](https://guides.github.com/activities/hello-world/)
+
+### Per scaricare eventuali aggiornamenti
+```bash
+git fetch --tags
+git pull
+```
+
+### Per creare un nuovo tag
+```bash
+git commit -m 'vN.M'
+git tag -m 'vN.M' 'commento'
+git push --tags
+```
