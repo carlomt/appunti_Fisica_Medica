@@ -1,15 +1,26 @@
 sudo: required
-language: generic
-services: docker
+install:
+  - sudo apt-get install -qq luatex texlive-base texlive-luatex pandoc latexmk texlive texlive-xetex tex4ht texlive-latex-extra texlive-fonts-extra
+  # make4ht
+  - git clone https://github.com/michal-h21/make4ht
+  - cd make4ht
+  - make
+  - sudo make install
+  - cd ..
 script:
-- docker run --mount src=$TRAVIS_BUILD_DIR/tex,target=/usr/src/tex,type=bind dxjoke/tectonic-docker
-  /bin/sh -c "tectonic appunti_Fisica_Medica.tex"
+  - git fetch --tags
+  - make
+  - sudo make install
+  - cd tex
+  - make
+  - tex4ebook
 deploy:
   provider: releases
   api_key:
     secure: UgNeWUc1REXYdBdCWm72iZzzA+46KW5SanguE4rrmjXsevR+PSCStKhubrnWvv0HLu1Z3GN0sDqdyXmekizhadFAGPHf7ocbkjDvNgQuoawdPkx1XL9BINaFkZnwoywl9LJLnhrSktJMjBQoQmCpQbgenPHrKYln/KSG4vZDmVXZ1vHVj7yVMja6bksqZOjqB9I3YpSvzfbSzeb1BUqFoBnFkp0dZfi1Lwmgp0e7AcqAXkypkU6T1HsPZIBF7/TY1EnQWWSjrXr4P4A/U2hGQgoedNzoPoN5TxBUeivCbl3hs2Ad7l1bbzJkxBsUWEsxQenRxYnT4vRWelrqlt6+5wAOIRMoZAjTjUg/x7ey8qZYQpFSo5kLcEsPXIXpT3UR616PdmgwOkP+eBo0Zf3zHnpljIs5zDmWPT2IxlWaFy2J/gsTkG/5weOBRyJ3UsnMgs8VbeU/WxlY5TyZtfxBznYivG7gPDQnMuCRkjt8sY95m3TE8aQADUW7EqcMeNCRBgAdyOZHZdSNGg4irCLSTgaD2WQ6eUzSYsLVGnqAksNbzbD0dTCkzxlxpZ8iudFqJ4q4d8A7C6MP2UzOQmrmc272vMcV/qLjrvT1U9PuVxmmXO3ILRmBSWxjWq8rW80Lr9hxMU/ZIlmsqDD00dxIa0czVv0EmyEgWSLKY6KPMKA=
   file:
   - "./tex/appunti_Fisica_Medica.pdf"
+  - "./tex/appunti_Fisica_Medica.epub"
   skip_cleanup: true
   on:
     tags: true
