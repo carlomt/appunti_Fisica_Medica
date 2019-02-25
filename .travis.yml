@@ -23,6 +23,7 @@ script:
   # crea l'epub
   - tex4ebook main.tex
   - mv main.epub appunti_Fisica_Medica.epub
+  - cd ..
   
 deploy:
   provider: releases
