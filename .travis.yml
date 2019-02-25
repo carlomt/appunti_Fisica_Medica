@@ -7,8 +7,12 @@ install:
   - make
   - sudo make install
   - cd ..
+  - git clone https://github.com/michal-h21/tex4ebook.git
+  - cd tex4ebook.git
+  - make
+  - sudo make install
+  - cd ..
 script:
-  - git fetch --tags
   - cd tex
   - make
   - tex4ebook appunti_Fisica_Medica.tex
