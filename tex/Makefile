@@ -1,7 +1,7 @@
 #variabili
 MAIN = appunti_Fisica_Medica
 BIB  = bibliografia.bib
-PDFLATEX   = pdflatex  #-interaction=nonstopmode
+PDFLATEX   = pdflatex  -interaction=nonstopmode -interaction=batchmode
 
 #comandi che non producono un file con lo stesso nome del comando
 .PHONY: all clean distclean dist
@@ -23,7 +23,7 @@ ifeq (, $(shell which latexmk))
 	@echo "Used $(PDFLATEX)"
 else
 	@echo "Using latexmk"
-	@latexmk -pdf -use-make $(MAIN).tex
+	@latexmk -pdf -use-make -silent $(MAIN).tex
 	@echo "Used latexmk"
 endif
 
