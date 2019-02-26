@@ -23,7 +23,7 @@ script:
   # crea l'epub
   - tex4ebook main.tex
   - mv main.epub appunti_Fisica_Medica.epub
-  - tex4ebook -f -x epub3 main.tex
+  - tex4ebook -f epub3 -x main.tex
   - mv main.epub appunti_Fisica_Medica_epub3.epub
   - cd ..
   
@@ -33,6 +33,7 @@ deploy:
   file:
   - "./tex/appunti_Fisica_Medica.pdf"
   - "./tex/appunti_Fisica_Medica.epub"
+  - "./tex/appunti_Fisica_Medica_epub3.epub"  
   skip_cleanup: true
   on:
     tags: true
