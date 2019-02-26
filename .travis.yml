@@ -21,7 +21,7 @@ script:
   # compila e crea il pdf
   - make
   # crea l'epub
-  - tex4ebook -x main.tex
+  - tex4ebook main.tex
   - mv main.epub appunti_Fisica_Medica.epub
   - tex4ebook -f -x epub3 main.tex
   - mv main.epub appunti_Fisica_Medica_epub3.epub
