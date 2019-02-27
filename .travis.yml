@@ -6,6 +6,7 @@ install:
 # per installare i pacchetti necessari
 # a compilare su linux (ubuntu o debian)
   - sudo apt-get install -qq \
+texlive-full \
 luatex \
 texlive-base \
 texlive-luatex \
