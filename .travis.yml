@@ -1,8 +1,26 @@
 # preparazione macchina virtuale
-sudo: required
-install:
-  # questo comando potrebbe essere utile per installare i pacchetti necessari a compilare su linux (ubuntu o debian)
-  - sudo apt-get install -qq luatex texlive-base texlive-luatex pandoc latexmk texlive texlive-xetex tex4ht texlive-latex-extra texlive-fonts-extra texlive-lang-italian texlive-science texlive-bibtex-extra html-xml-utils
+# sudo: required
+# install:
+## questo comando potrebbe essere utile
+## per installare i pacchetti necessari
+## a compilare su linux (ubuntu o debian)
+#   - sudo apt-get install -qq \
+# luatex \
+# texlive-base \
+# texlive-luatex \
+# pandoc latexmk \
+# texlive \
+# texlive-xetex \
+# tex4ht \
+# texlive-latex-extra \
+# texlive-fonts-extra \
+# texlive-lang-italian \
+# texlive-science \
+# texlive-bibtex-extra \
+# html-xml-utils
+
+image: aergus/latex
+
   # installazione di tex4ebook (per creare l'epub, non indispensabile)
   - git clone https://github.com/michal-h21/make4ht
   - cd make4ht
