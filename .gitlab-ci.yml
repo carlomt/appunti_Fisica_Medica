@@ -1,16 +1,32 @@
 pdf:
-  stage: deploy
-  image: aergus/latex
-  script:
-  - env
-  - pwd
-  - ls -l
-  - ls -l ${CI_PROJECT_DIR}
-  - wget -q https://cmake.org/files/v3.12/cmake-3.12.3-Linux-x86_64.sh
-  - mkdir -p ${CI_PROJECT_DIR}/cmake-install && sh cmake-3.12.3-Linux-x86_64.sh --skip-license --prefix=${CI_PROJECT_DIR}/cmake-install
-  - mkdir build && cd build && ${CI_PROJECT_DIR}/cmake-install/bin/cmake ${CI_PROJECT_DIR}/tex && ${CI_PROJECT_DIR}/cmake-install/bin/cmake --build .
-  artifacts:
-    paths:
-    - build/appunti_Fisica_Medica.pdf
-  only:
-  - master
+    stage: deploy
+    image: carlomt/latex
+    script:
+    - cmake ${CI_PROJECT_DIR}/tex && cmake --build .
+    artifacts:
+        paths:
+        - ${CI_PROJECT_DIR}/appunti_Fisica_Medica.pdf
+    only:
+    - master
+
+epub:
+    stage: deploy
+    image: carlomt/latex
+    script:
+    - cd ${CI_PROJECT_DIR}/tex && tex4ebook -f epub   main.tex && mv main.epub ${CI_PROJECT_DIR}/appunti_Fisica_Medica.epub
+    artifacts:
+        paths:
+        - ${CI_PROJECT_DIR}/appunti_Fisica_Medica.epub
+    only:
+    - master
+
+epub3:
+    stage: deploy
+    image: carlomt/latex
+    script:
+    - cd ${CI_PROJECT_DIR}/tex && tex4ebook -f epub3  main.tex && mv main.epub ${CI_PROJECT_DIR}/appunti_Fisica_Medica_epub3.epub
+    artifacts:
+        paths:
+        - ${CI_PROJECT_DIR}/appunti_Fisica_Medica_epub3.epub
+    only:
+    - master
