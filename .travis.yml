@@ -2,10 +2,15 @@ sudo: required
 language: generic
 services: docker
 
+# We use the docker image from https://hub.docker.com/r/carlomt/latex	
+before_install:
+- docker pull carlomt/latex
+
 script:
-  # We use the docker image from https://hub.docker.com/r/carlomt/latex
   # Compiling only main.tex:
-  - docker run --mount src=$TRAVIS_BUILD_DIR/tex,target=/tex,type=bind carlomt/latex /bin/sh -c "cd /tex; pwd; ls; make; tex4ebook -f epub main.tex && mv main.epub appunti_Fisica_Medica.epub; tex4ebook -f epub3 main.tex && mv main.epub appunti_Fisica_Medica_epub3.epub"
+  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/repo, type=bind carlomt/latex /bin/sh -c "cd repo/tex && make"
+  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/repo, type=bind carlomt/latex /bin/sh -c "cd repo/tex && tex4ebook -f epub main.tex && mv main.epub appunti_Fisica_Medica.epub"
+  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/repo, type=bind carlomt/latex /bin/sh -c "cd repo/tex && tex4ebook -f epub3 main.tex && mv main.epub appunti_Fisica_Medica_epub3.epub"
   
 deploy:
   provider: releases
